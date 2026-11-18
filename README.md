@@ -91,23 +91,14 @@ The logout route is protected and returns `204 No Content`. This acknowledges lo
 
 ## Swagger test evidence
 
-These screenshots show the local API test responses. Passwords, access tokens, and account-specific response details are not included.
+The local Swagger tests returned the expected responses. The redacted evidence images are included in the project ZIP under `screenshots/`:
 
-### Signup — 201 Created
+- `signup.png` — POST `/auth/signup`, 201 Created
+- `login.png` — POST `/auth/login`, 200 OK
+- `protected-profile.png` — GET `/protected/profile`, 200 OK
+- `logout.png` — POST `/auth/logout`, 204 No Content
 
-![Signup response](screenshots/signup.jpg)
-
-### Login — 200 OK
-
-![Login response](screenshots/login.jpg)
-
-### Protected profile — 200 OK
-
-![Protected profile response](screenshots/protected-profile.jpg)
-
-### Logout — 204 No Content
-
-![Logout response](screenshots/logout.jpg)
+For the repository copy, add the four PNG files from the ZIP's `screenshots/` folder to this repository's `screenshots/` folder.
 
 ## Existing PostgreSQL task API
 
@@ -137,7 +128,7 @@ The PostgreSQL CRUD integration test requires a disposable database configured t
 - [x] `.env.example` contains placeholders only.
 - [x] The application uses the public Supabase anon/publishable key, not the service-role key.
 - [x] Protected routes verify bearer tokens with Supabase.
-- [x] Passwords and JWTs are excluded from the committed screenshots.
+- [x] Passwords and JWTs are excluded from the redacted screenshot copies in the ZIP.
 - [ ] Before production use, add server-side session revocation and stricter rate limiting.
 
 ## Project structure
